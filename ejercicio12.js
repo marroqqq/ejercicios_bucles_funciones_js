@@ -12,5 +12,11 @@ const mutants = [
 ]
 
 function findMutantByPower(mutants, power) {
-  // insert code
+  for (const element of mutants) {
+    if (element.power == power) {
+      return 'El poder ' + power + ' fue encontrado'
+    }
+  }
+  return 'No se encontró ningún poder'
 }
+console.log(findMutantByPower(mutants, 'teleportation'))
